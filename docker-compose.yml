@@ -1,0 +1,13 @@
+version: '3'
+services:
+   mongodb:
+    image: mongodb:latest
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    volumes:
+      - dbdata6:/data/db
+    env_file:
+      - ./.env
+volumes:
+  dbdata6:
